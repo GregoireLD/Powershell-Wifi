@@ -26,9 +26,11 @@ Import-Module <Path_to_the_Powershell-Wifi.psm1_file>
 The resulting object will retreive the password only on a "as-needed" basis, and, if needed, will result in the prompting
 of a user password.
 
-ie, on macOS, `$myWifi = Get-Wifi`{:.powershell}, won't trigger a password prompt
-(because at this point the password is not retrieved), but `Get-Wifi`{:.powershell} will,
+ie, on macOS, `$myWifi = Get-Wifi`, won't trigger a password prompt
+(because at this point the password is not retrieved), but `Get-Wifi` will,
 because the password must be retrieved prior to displaying it.
+
+If you want to retreive the pasword at the time of the creation of the Wifi object, you can use the `-retreivePassword` flag.
 
 ### toString() :
 
@@ -49,6 +51,11 @@ $myWifi.toString()
 #### Getting an object targeting the current Wifi
 ```powershell
 $myWifi = Get-Wifi
+```
+
+#### Getting an object targeting the current Wifi with pre-fetched password
+```powershell
+$myWifi = Get-Wifi -retreivePassword
 ```
 
 #### Getting an object targeting a specific SSID
