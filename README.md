@@ -1,5 +1,5 @@
 # Powershell-Wifi
-Manage stored Wifi Network on Windows, macOS, and Linux
+Manage stored Wifi Network on macOS, and soon Windows and Linux too.
 
 ## Samples :
 
