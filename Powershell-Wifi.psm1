@@ -103,7 +103,7 @@ class Wifi {
 function Get-Wifi {
 	[CmdletBinding()]
 	param (
-		[Parameter(Position=0,mandatory=$true)][string] $SSID="",
+		[Parameter(Position=0)][string] $SSID="",
 		[Parameter(mandatory=$false)][string] $Password="",
 		[switch] $retreivePassword=$false
 	)
